@@ -17,7 +17,7 @@ int y[5]; /*Arreglo con los indices en orden */
 
   /* Declaraciones de variables y tipo de dato, puede ser globales*/
   int i=0,tmp,l=0;
-  int r=1;
+  int r=1,k,j;
 
   while(i<5 && r==1){
   printf("Introduce el nombre del libro  %i \n",i);
@@ -29,23 +29,29 @@ int y[5]; /*Arreglo con los indices en orden */
   l++;
   if(i==0) y[i]=i;
   else {
-        if(a[i].ao < a[i-1].ao){
-           tmp=i-1; /*Swap - intercambio */
-           y[i-1]=i;
-	   y[i]=i-1;
+	k=i-1;
+	j=i;
+	while(k>=0){
+        if(a[j].ao < a[k].ao){ /*Compara años */
+           tmp=a[k].ao; /*Swap - intercambio de años en las estructuras */
+           a[k].ao=a[j].ao;
+	   a[j].ao=tmp;
 	} /* Fin if*/
+	k--;
+	j--;
+	} /*fin while */
        } /* Fin else*/
    i++;
-   printf("Introducir otro libro? (0 = NO, 1=SI)\n");
+   printf("Introducir otro libro? (0 = NO, 1 = SI)\n");
    scanf("%d",&r);
   } /*Fin while*/
   /*Impresiones en orden*/
   for(i=0;i<l;i++)
    {
    printf("Libro  %i \n",i);
-   printf("Nombre:  %s \n",a[y[i]].s);
-   printf("Editorial:  %s \n",a[y[i]].e);
-   printf("Anio de publicacion:  %d \n",a[y[i]].ao);
+   printf("Nombre:  %s \n",a[i].s);
+   printf("Editorial:  %s \n",a[i].e);
+   printf("Anio de publicacion:  %d \n",a[i].ao);
      } 
  
  exit(0);
