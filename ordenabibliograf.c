@@ -36,7 +36,7 @@ int y[5]; /*Arreglo con los indices en orden */
 	} /* Fin if*/
        } /* Fin else*/
    i++;
-   printf("Introducir otro libro? (0 = NO)\n");
+   printf("Introducir otro libro? (0 = NO, 1=SI)\n");
    scanf("%d",&r);
   } /*Fin while*/
   /*Impresiones en orden*/
