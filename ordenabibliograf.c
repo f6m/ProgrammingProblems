@@ -1,7 +1,5 @@
 /* Problema: ordenar a lo mas 5 libros en base al año */
-/* Compilacion: https://www.onlinegdb.com/online_c_compiler */
-
-
+/* Compilacion:  */
 #include <stdio.h>
 #include <string.h>
 
@@ -19,15 +17,15 @@ int y[5]; /*Arreglo con los indices en orden */
 
   /* Declaraciones de variables y tipo de dato, puede ser globales*/
   int i=0,tmp,l=0;
-  char r;
+  int r=1;
 
-  while(i<5 && r!=EOF){
+  while(i<5 && r==1){
   printf("Introduce el nombre del libro  %i \n",i);
-  scanf("%s\n",(a[i]).s);
+  scanf("%s",(a[i]).s);
   printf("Introduce la editorial del libro  %i \n",i);
-  scanf("%s\n",(a[i]).e);
+  scanf("%s",(a[i]).e);
   printf("Introduce el año de publicación del libro  %i \n",i);
-  scanf("%d\n",&(a[i]).ao);
+  scanf("%d",&(a[i]).ao);
   l++;
   if(i==0) y[i]=i;
   else {
@@ -38,8 +36,8 @@ int y[5]; /*Arreglo con los indices en orden */
 	} /* Fin if*/
        } /* Fin else*/
    i++;
-   printf("Introducir otro libro? (Ctrl+D = NO)");
-   scanf("%c",r);
+   printf("Introducir otro libro? (0 = NO)\n");
+   scanf("%d",&r);
   } /*Fin while*/
   /*Impresiones en orden*/
   for(i=0;i<l;i++)
@@ -53,3 +51,5 @@ int y[5]; /*Arreglo con los indices en orden */
  exit(0);
   
 }
+
+
