@@ -1,6 +1,6 @@
 /* Problema: Determina si el año es bisiesto y suma 585 a la fecha de solicitud */
 /* basado en la idea en el libro de programacion R&K pags. 42-43 */
-/* Compilacion: https://www.onlinegdb.com/online_c_compiler */
+
 #include <stdio.h>
 
 /*Correspondencia indice arreglo - dias del mes*/
