@@ -1,6 +1,10 @@
 /* Problema: Determina si el año es bisiesto y suma 585 a la fecha de solicitud */
-/* basado en la idea en el libro de programacion R&K pags. 42-43 */
+/* basado en la idea en el libro de programacion R&K pags. 42-43 
+Por ejemplo si lo ejecutan con la entrada: año = 2022, dia = 1, mes = 1
+el programa indica que la fecha de tu cita será el 3 del mes 7 del 2023 */
 
+/* Compilación: cc cita.c -g */
+/* Ejecución: ./a.out */
 #include <stdio.h>
 
 /*Correspondencia indice arreglo - dias del mes*/
